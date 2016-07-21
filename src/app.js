@@ -1,20 +1,21 @@
 // import {Person} from './model/Person';
 import Vue from 'vue';
+import marked from 'marked'
 
-class Human {
-    constructor(arg = { firstName: "John", lastName: "Doe" }) {
-        this.fields = arg;
-    }
+// class Human {
+//     constructor(arg = { firstName: "John", lastName: "Doe" }) {
+//         this.fields = arg;
+//     }
 
-    get(fieldName) {
-        return this.fields[fieldName];
-    }
+//     get(fieldName) {
+//         return this.fields[fieldName];
+//     }
 
-    set(fieldName, value) {
-        this.fields[fieldName] = value;
-        return this;
-    }
-}
+//     set(fieldName, value) {
+//         this.fields[fieldName] = value;
+//         return this;
+//     }
+// }
 
 // class Demo extends Vue {
 //     constructor() {
@@ -33,7 +34,7 @@ class Markdown extends Vue {
         var properties = {
             el: '#editor',
             data: {
-                input: '#hello'
+                input: '# edit here!'
             },
             filters: {
                 marked: marked
