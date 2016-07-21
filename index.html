@@ -15,18 +15,9 @@
 <body>
   <div id="editor">
     <textarea v-model="input" debounce="300"></textarea>
-    <div v-html="input | marked"></div>
+    <div class="outarea" v-html="input | md2html"></div>
   </div>
-  <!--<div id="demo">
-    <h1>{{bob.fields.firstName}} {{bob.fields.lastName}}</h1>
-  </div>-->
 
-  <!--<ul id="humans-list">
-    <li v-repeat="humans">
-      {{fields.firstName}} {{fields.lastName}}
-    </li>
-  </ul>-->
-  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>-->
   <script src="./dist/app.js"> </script>
 </body>
 

@@ -1,64 +1,24 @@
 // import {Person} from './model/Person';
-import Vue from 'vue';
-import marked from 'marked'
+import Vue from 'vue'
+import mdit from "markdown-it"
+import mdEmoji from "markdown-it-emoji"
 
-// class Human {
-//     constructor(arg = { firstName: "John", lastName: "Doe" }) {
-//         this.fields = arg;
-//     }
+const markdown = new mdit().use(mdEmoji)
 
-//     get(fieldName) {
-//         return this.fields[fieldName];
-//     }
-
-//     set(fieldName, value) {
-//         this.fields[fieldName] = value;
-//         return this;
-//     }
-// }
-
-// class Demo extends Vue {
-//     constructor() {
-//         var properties = {
-//             el: '#demo',
-//             data: {
-//                 bob: new Human({ firstName: "テスト", lastName: "太郎" })
-//             }
-//         };
-//         super(properties)
-//     }
-// }
+Vue.filter('md2html',  function(text) {
+    return markdown.render(text);
+  });
 
 class Markdown extends Vue {
     constructor() {
         var properties = {
             el: '#editor',
             data: {
-                input: '# edit here!'
-            },
-            filters: {
-                marked: marked
+                input: '## Edit here!\nYou can use emoji :smile:'
             }
         };
         super(properties)
     }
 }
 
-// class HumansList extends Vue {
-//   constructor (collection) {
-//     this.collection = collection;
-//     super({
-//       el: "#humans-list", data: collection
-//     })
-//   }
-// }
-
-// let demo = new Demo()
 let md = new Markdown()
-
-// let humansList = new HumansList({
-//   humans:[
-//     new Human(),
-//     new Human({firstName:"Jane", lastName:"Doe"})
-//   ]
-// });
