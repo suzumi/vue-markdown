@@ -5,7 +5,7 @@
   "homepage": "https://github.com/thoughtram/es6-6to5-browserify-boilerplate",
   "scripts": {
     "start": "gulp serve",
-    "gulp": "gulp",
+    "build": "gulp build",
     "watch": "gulp watch"
   },
   "repository": {
