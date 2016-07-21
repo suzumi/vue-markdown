@@ -3,6 +3,11 @@
   "version": "0.0.0",
   "description": "A repo to play with ES6++",
   "homepage": "https://github.com/thoughtram/es6-6to5-browserify-boilerplate",
+  "scripts": {
+    "start": "gulp serve",
+    "gulp": "gulp",
+    "watch": "gulp watch"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/thoughtram/es6-6to5-browserify-boilerplate.git"
@@ -22,5 +27,8 @@
     "vinyl-source-stream": "^1.0.0"
   },
   "author": "Christoph Burgdorf <christoph@thoughtram.io>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "vue": "^1.0.26"
+  }
 }
