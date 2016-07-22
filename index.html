@@ -5,6 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/assets/codemirror/lib/codemirror.css">
+  <link rel="stylesheet" href="/assets/css/base16-light.css">
+  <link rel="stylesheet" href="/assets/css/github-markdown.css">
   <link rel="stylesheet" href="/assets/css/style.css">
 
   <title>vue markdown app</title>
@@ -14,11 +17,14 @@
 
 <body>
   <div id="editor">
-    <textarea v-model="input" debounce="300"></textarea>
-    <div class="outarea" v-html="input | md2html"></div>
+    <textarea id="mdarea" v-model="input" debounce="300"></textarea>
+    <div class="outarea markdown-body" v-html="input | md2html"></div>
   </div>
 
-  <script src="./dist/app.js"> </script>
+  <script src="/assets/codemirror/lib/codemirror.js"></script>
+  <script src="/assets/codemirror/mode/gfm/gfm.js"></script>
+  <script src="/assets/codemirror/addon/overlay.js"></script>
+  <script src="./dist/app.js"></script>
 </body>
 
 </html>

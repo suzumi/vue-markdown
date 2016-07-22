@@ -1,7 +1,8 @@
 html, body, #editor {
   margin: 0;
   height: 100%;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  font-family: "Linux Libertine", serifs;
   color: #333;
 }
 
@@ -31,6 +32,14 @@ code {
   color: #f66;
 }
 
+/*.markdown-body {
+  font-family: "Linux Libertine", serifs;
+}*/
+
 .outarea {
   font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
+}
+
+.outarea > math {
+  font-size: 1.6em;
 }
